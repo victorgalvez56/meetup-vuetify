@@ -29,13 +29,13 @@ const routes = [
       import(/* webpackChunkName: "signup" */ "../views/User/Signup.vue")
   },
   {
-    path: "/meetup",
+    path: "/meetups",
     name: "List Meetup",
     component: () =>
       import(/* webpackChunkName: "signin" */ "../views/Meetup/ListMeetup.vue")
   },
   {
-    path: "/meetup/add",
+    path: "/meetup-add",
     name: "Create Meetup",
     component: () =>
       import(

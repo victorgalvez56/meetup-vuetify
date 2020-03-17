@@ -2,7 +2,7 @@
   <v-app id="inspire">
     <v-navigation-drawer v-model="drawer" app clipped>
       <v-list dense>
-        <v-list-item v-for="item in items" :key="item.text" link>
+        <v-list-item v-for="item in items" :key="item.text" :to="item.link">
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
@@ -53,7 +53,9 @@
         mdi-youtube
       </v-icon>
       <v-toolbar-title class="mr-12 align-center">
-        <span class="title">Youtube</span>
+        <router-link to="/" tag="span" style="cursor: pointer"
+          >DevMeetups</router-link
+        >
       </v-toolbar-title>
       <v-spacer />
       <v-row align="center" style="max-width: 650px">
@@ -86,11 +88,11 @@ export default {
   data: () => ({
     drawer: null,
     items: [
-      { icon: "supervisor_account", text: "View Meetups" },
-      { icon: "room", text: "Organize Meetup" },
-      { icon: "person", text: "Profile" },
-      { icon: "face", text: "Sign in" },
-      { icon: "lock_open", text: "Sign up" }
+      { icon: "supervisor_account", text: "View Meetups", link: "/meetups" },
+      { icon: "room", text: "Organize Meetup", link: "/meetup-add" },
+      { icon: "person", text: "Profile", link: "/profile" },
+      { icon: "face", text: "Sign in", link: "/signup" },
+      { icon: "lock_open", text: "Sign up", link: "/signin" }
     ],
     items2: [
       { picture: 28, text: "Joseph" },
