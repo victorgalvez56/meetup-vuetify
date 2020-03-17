@@ -47,7 +47,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar app clipped-left color="red" dense>
+    <v-app-bar app clipped-left color="blue" dense>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-icon class="mx-4" large>
         mdi-youtube
@@ -64,7 +64,7 @@
           placeholder="Search..."
           single-line
           append-icon="mdi-magnify"
-          color="white"
+          color="blue"
           hide-details
         />
       </v-row>
@@ -103,7 +103,7 @@ export default {
     ]
   }),
   created() {
-    this.$vuetify.theme.dark = true;
+    this.$vuetify.theme.dark = false;
   }
 };
 </script>
